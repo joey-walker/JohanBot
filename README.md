@@ -1,4 +1,22 @@
 # JohanBot Project
+## What is JohanBot?
+
+TODO
+
 ## TODO
-- [x] Make Readme
-- [ ] Make Readme useful
+
+First things first, we need the below to get a basic structure.
+
+- Implement an actual logging system for debug and error information.
+
+- Move Discord API from Main to separate set of functions.
+
+- Implement Slack API for bot.
+
+- Implement bot struct based on above API.
+
+- Implement describe action to grab summary of information from wikipedia.
+
+- Review proper golang project structure and sort source directory.
+
+- Create a testing infrastructure (less importance on this).
