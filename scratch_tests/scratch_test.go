@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"testing"
 	"os"
+	"testing"
 )
 
 func TestScratch(*testing.T) {
-	fmt.Println("",os.Getenv("JOHAN_TOKEN"))
+	fmt.Println("", os.Getenv("JOHAN_TOKEN"))
 }

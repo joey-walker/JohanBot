@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/joey-walker/johanbot/common"
+)
 
 const wikiBase string = "https://en.wikipedia.org/w/api.php?"
 const action string = "action="
@@ -15,7 +18,7 @@ const searchAllAction string = searchQuery + ampersand + searchAll
 
 // Search for an object
 func searchAll(searchItem string) {
-	strippedItem := convertSpacesToNbsp(searchItem)
+	strippedItem := common.ConvertSpacesToNbsp(searchItem)
 	fmt.Println("my strippedItem, ", strippedItem)
 
 }

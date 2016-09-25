@@ -7,7 +7,7 @@ TODO
 
 First things first, we need the below to get a basic structure.
 
-- Implement an actual logging system for debug and error information.
+- [x] Implement an actual logging system for debug and error information. 
 
 - Move Discord API from Main to separate set of functions.
 

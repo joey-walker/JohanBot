@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
 	"os"
+	"github.com/joey-walker/johanbot/common"
 )
 
 // Bot information should placed in own bot Struct
@@ -11,17 +12,20 @@ var (
 	BotID      string
 	BotMention string
 	exit       bool = false
+
 )
 
 func main() {
+
 
 	//Open connection with token obtained from system environment.
 	//We need to move this to its own channel so we can use both slack and discord.
 	discord, err := discordgo.New(os.Getenv("JOHAN_TOKEN"))
 
+
 	//All error messages need to be transferred to a proper logging mechanism
 	if err != nil {
-		fmt.Println("Failed to connect, ", err)
+		common.LogInfo("","")
 		return
 	}
 
@@ -36,8 +40,6 @@ func main() {
 	for _, userChannel := range userChannels {
 		discord.ChannelMessageSend(userChannel.ID, "Johan Bot Starting")
 	}
-
-
 
 	//Get own info
 	botInfo, err := discord.Application("@me")
@@ -54,7 +56,6 @@ func main() {
 
 	//Add function for actions on listening to channel
 	discord.AddHandler(createMessage)
-
 
 	//open the channel
 	err = discord.Open()
