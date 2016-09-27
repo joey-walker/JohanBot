@@ -16,10 +16,12 @@ func StartSlack(slackToken string) {
 		fmt.Println("failure to connect to slack")
 	}
 
-	params := slack.PostMessageParameters{}
+	params := slack.PostMessageParameters{
+		AsUser: true,
+		//Username: "johan",
+	}
 
 	for _, channel := range slackChannels {
 		api.PostMessage(channel.ID, "johanbot sending message", params)
 	}
-
 }
