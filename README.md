@@ -9,7 +9,7 @@ First things first, we need the below to get a basic structure.
 
 - [x] Implement an actual logging system for debug and error information. 
 
-- Move Discord API from Main to separate set of functions.
+- [x] Move Discord API from Main to separate set of functions.
 
 - Implement Slack API for bot.
 
@@ -19,4 +19,4 @@ First things first, we need the below to get a basic structure.
 
 - Review proper golang project structure and sort source directory.
 
-- Create a testing infrastructure (less importance on this).
+- TEST, EVERYTHING MUST BE TESTED
